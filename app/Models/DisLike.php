@@ -10,8 +10,8 @@ class DisLike extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    public function BaiViet()
+    public function Post()
     {
-        return $this->hasMany(BaiViet::class);
+        return $this->hasMany(Post::class);
     }
 }

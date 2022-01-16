@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBinhLuans extends Migration
+class CreateComments extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateBinhLuans extends Migration
      */
     public function up()
     {
-        Schema::create('binh_luans', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('van_ban');
+            $table->string('noi_dung');
             $table->foreignId('user_id');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +30,6 @@ class CreateBinhLuans extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('binh_luan');
+        Schema::dropIfExists('comments');
     }
 }

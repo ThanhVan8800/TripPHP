@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  @include('shared.head')
+  @include('head')
 </head>
 
 <body class="hold-transition login-page">
@@ -14,7 +14,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Đăng ký tài khoản</p>
-      @include('shared.alert')
+      @include('alert')
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div class="input-group mb-3">
@@ -32,4 +32,4 @@
         </form>
         </div>
 </div>
-        @include('shared.footer')
+        @include('footer')

@@ -16,7 +16,7 @@ class CreateLuotXems extends Migration
         Schema::create('luot_xems', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->integer('so_luot_xem');
             $table->timestamps();
             $table->softDeletes();

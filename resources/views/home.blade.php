@@ -1,5 +1,4 @@
-@extends ('shared.main')
+@extends ('main')
 @section('content')
-
     Phần nội  dung
 @endsection

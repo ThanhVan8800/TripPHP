@@ -14,8 +14,8 @@ class DanhGia extends Model
     {
         return $this->hasMany(User::class);
     }
-    public function BaiViet()
+    public function Post()
     {
-        return $this->hasMany(BaiViet::class);
+        return $this->hasMany(Post::class);
     }
 }

@@ -16,7 +16,7 @@ class CreateDislikes extends Migration
         Schema::create('dislikes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->integer('trang_thai');
             $table->timestamps();
             $table->softDeletes();

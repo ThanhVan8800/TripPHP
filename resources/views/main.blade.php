@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        @include('shared.head')
+        @include('head')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -45,7 +45,7 @@
         </nav>
         <!-- /.navbar -->
 
-      @include('shared.sidebar')
+      @include('sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -55,7 +55,7 @@
             <section class="content">
                 <div class="container-fluid">
 
-                @include('shared.alert')
+                @include('alert')
                   
                     <div class="row">
                     <!-- left column -->
@@ -84,7 +84,7 @@
         
 </div>
 <!-- ./wrapper -->
-@include('shared.footer')
+@include('footer')
 
 </body>
 </html>

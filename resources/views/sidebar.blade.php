@@ -77,9 +77,9 @@
                     <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <!-- ghi đường dẫn vô -->
-                        <a href="#" class="nav-link">
+                        <a href="/admin/user/taikhoan/" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Thêm Mới Sản Phẩm</p>
+                        <p>Thêm Tài Khoản Mới</p>
                         </a>
                     </li>
                     <li class="nav-item">

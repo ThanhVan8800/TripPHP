@@ -16,7 +16,7 @@ class CreateHinhAnhs extends Migration
         Schema::create('hinh_anhs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('dia_danh_id');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->string('ten_hinh_anh');
             $table->integer('trang_thai');
             $table->timestamps();

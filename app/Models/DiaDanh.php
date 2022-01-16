@@ -23,9 +23,9 @@ class DiaDanh extends Model
     {
         return $this->hasMany(HinhAnh::class);
     }
-    public function BaiViet()
+    public function Post()
     {
-        return $this->hasMany(BaiViet::class);
+        return $this->hasMany(Post::class);
     }
     public function User()
     {

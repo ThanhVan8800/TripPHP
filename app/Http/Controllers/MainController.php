@@ -13,7 +13,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view('shared.home',[
+        return view('home',[
             'title'=>"Trang quản trị"
         ]);
     }

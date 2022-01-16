@@ -14,8 +14,8 @@ class HinhAnh extends Model
     {
         return $this->belongsTo(DiaDanh::class);
     }
-    public function BaiViet()
+    public function Post()
     {
-        return $this->belongsTo(BaiViet::class);
+        return $this->belongsTo(Post::class);
     }
 }

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  @include('shared.head')
+  @include('head')
 </head>
 
 <body class="hold-transition login-page">
@@ -25,7 +25,7 @@
                     
                 @endguest
       <p class="login-box-msg">Đăng nhập tài khoản admin của bạn</p>
-      @include('shared.alert')
+      @include('alert')
       <form action="{{route('login')}}" method="post"><!--truyen duong dan-->
               <div class="input-group mb-3">
                 <input type="email" class="form-control" name="email" placeholder="Email">
@@ -76,7 +76,7 @@
     <!-- /.login-card-body -->
   </div>
 </div>
-        @include('shared.footer') <!---đưa phần view đã cắt vào login->
+        @include('footer') <!---đưa phần view đã cắt vào login->
 
 </body>
 </html>

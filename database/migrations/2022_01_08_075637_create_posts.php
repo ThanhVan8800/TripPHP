@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBaiViets extends Migration
+class CreatePosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateBaiViets extends Migration
      */
     public function up()
     {
-        Schema::create('bai_viets', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('ten_bai_viet',255);
-            $table->datetime('ngay_dang');
             $table->foreignId('user_id');
-            $table->string('noi_dung');
-            $table->integer('luot_like');
-            $table->string('hinh_anh');
-            $table->integer('trang_thai');
+            $table->string('body');
+            // $table->integer('luot_like');
+            $table->string('image')->nullable();
+            
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +32,6 @@ class CreateBaiViets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bai_viet');
+        Schema::dropIfExists('posts');
     }
 }

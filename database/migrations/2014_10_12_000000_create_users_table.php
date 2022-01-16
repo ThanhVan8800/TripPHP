@@ -17,8 +17,11 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name',255);
             //$table->integer('gioi_tinh')->nullable();
+            $table->string('image')->nullable();
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->rememberToken();
             //$table->dateTime('ngay_sinh')->nullable();
             //$table->integer('trang_thai')->nullable();
             $table->timestamps();

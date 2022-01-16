@@ -12,6 +12,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Like;
 
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -21,19 +22,16 @@ class User extends Authenticatable implements MustVerifyEmail
    use SoftDeletes;
     use Notifiable;
    
-    public function ThongTinNguoiDung()
+    
+    public function posts()
     {
-            return $this->belongsTo(ThongTinNguoiDung::class);
-    }
-    public function BaiViet()
-    {
-        return $this->hasMany(BaiViet::class);
+        return $this->hasMany(Post::class);
     }
     public function DanhGia()
     {
         return $this->hasMany(DanhGia::class);
     }
-    public function Like()
+    public function likes()
     {
         return $this->belongsTo(Like::class);
     }
@@ -41,9 +39,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo(DisLike::class);
     }
-    public function BinhLuan()
+    public function comments() /////////**** */
     {
-        return $this->hasMany(BinhLuan::class);
+        return $this->hasMany(Comment::class);
     }
     public function DiaDanh()
     {
@@ -56,11 +54,11 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $fillable = [
         'name',
-        
         'email',
-        'password',
-        'ngay_sinh',
-        'trang_thai'
+        'image',
+        'password'
+        // 'ngay_sinh',
+        // 'trang_thai'
     ];
 
     /**

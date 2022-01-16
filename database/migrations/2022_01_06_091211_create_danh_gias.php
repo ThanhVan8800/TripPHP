@@ -16,7 +16,7 @@ class CreateDanhGias extends Migration
         Schema::create('danh_gias', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->timestamps();
             $table->softDeletes();
         });

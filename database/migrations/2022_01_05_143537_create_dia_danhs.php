@@ -21,7 +21,7 @@ class CreateDiaDanhs extends Migration
             $table->string('kinh_do');
             $table->string('mo_ta');
             $table->integer('trang_thai');
-            $table->foreignId('bai_viet_id');
+            $table->foreignId('post_id');
             $table->foreignId('user_id');
             $table->timestamps();
             $table->softDeletes();
